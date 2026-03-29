@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://apexoperations.us/sitemap.xml

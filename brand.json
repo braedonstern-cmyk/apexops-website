@@ -1,0 +1,47 @@
+{
+  "name": "ApexOps",
+  "owner": "Braedon",
+  "tagline": "AI Automation for Real Businesses",
+  "location": "San Diego, CA",
+  "phone": "(858) 774-4049",
+  "email": "braedon@apexoperations.us",
+  "url": "https://apexoperations.us",
+  "primaryCTA": "Get Free Audit",
+  "aesthetic": "Dark premium with pearlescent blue-purple accents",
+  "colors": {
+    "bg": "#05070F",
+    "bgElevated": "#0A0D1A",
+    "bgCard": "rgba(255,255,255,0.03)",
+    "blue": "#3B82F6",
+    "blueLight": "#60A5FA",
+    "purple": "#7C3AED",
+    "purpleLight": "#A78BFA",
+    "indigo": "#4F46E5",
+    "pinkLight": "#F0ABFC",
+    "text": "#F1F5F9",
+    "textMuted": "#94A3B8",
+    "textFaint": "#475569",
+    "border": "rgba(255,255,255,0.07)",
+    "borderBright": "rgba(255,255,255,0.12)"
+  },
+  "gradients": {
+    "pearl": "linear-gradient(135deg, #3B82F6 0%, #6366F1 35%, #7C3AED 65%, #A78BFA 100%)",
+    "pearlAnimated": "linear-gradient(135deg, #60A5FA 0%, #A78BFA 25%, #F0ABFC 50%, #60A5FA 75%, #A78BFA 100%)",
+    "hero": "linear-gradient(135deg, #3B82F6, #7C3AED)"
+  },
+  "typography": {
+    "heading": "Space Grotesk",
+    "body": "Inter",
+    "headingWeights": [400, 500, 700],
+    "bodyWeights": [400, 500]
+  },
+  "tone": "Direct, empathetic, no-jargon, personal. Short punchy sentences. Problem-first framing.",
+  "differentiator": "Solo operator who uses what he sells. Custom builds, not templates. No contracts.",
+  "services": [
+    "AI Chatbot", "Voice Agent", "Client Onboarding Automation",
+    "Email & SMS Automation", "CRM Setup", "24/7 Lead Capture",
+    "Automated Follow-Up", "Google My Business Optimization",
+    "Review Generation", "Website Development",
+    "Live Dashboards", "Google Analytics", "Competitor Monitoring"
+  ]
+}
