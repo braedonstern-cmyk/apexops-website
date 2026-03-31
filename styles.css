@@ -12,10 +12,10 @@
    ============================================================ */
 :root {
   /* Backgrounds */
-  --bg:            #05070F;
-  --bg-elevated:   #0A0D1A;
-  --bg-card:       rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.055);
+  --bg:            #080B14;
+  --bg-elevated:   #0D1220;
+  --bg-card:       rgba(255, 255, 255, 0.055);
+  --bg-card-hover: rgba(255, 255, 255, 0.09);
 
   /* Pearl palette */
   --blue:          #3B82F6;
@@ -33,13 +33,13 @@
   --grad-glow:     radial-gradient(ellipse at center, rgba(124,58,237,0.25) 0%, transparent 70%);
 
   /* Text */
-  --text:          #F1F5F9;
-  --text-muted:    #94A3B8;
-  --text-faint:    #475569;
+  --text:          #F8FAFC;
+  --text-muted:    #C1CEDF;
+  --text-faint:    #8A9BB5;
 
   /* Borders */
-  --border:        rgba(255, 255, 255, 0.07);
-  --border-bright: rgba(255, 255, 255, 0.13);
+  --border:        rgba(255, 255, 255, 0.10);
+  --border-bright: rgba(255, 255, 255, 0.20);
 
   /* Shadows */
   --shadow-sm:     0 1px 3px rgba(0, 0, 0, 0.5);
@@ -370,11 +370,12 @@ section {
 }
 
 .nav.scrolled {
-  background: rgba(5, 7, 15, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(4, 6, 12, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: var(--space-3) 0;
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .nav-inner {
@@ -507,84 +508,54 @@ section {
   align-items: center;
   padding: calc(80px + var(--space-16)) 0 var(--space-24);
   overflow: hidden;
+  background: #000;
 }
 
-/* Aurora background */
-.aurora {
+/* Hero image background */
+.hero-bg {
   position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
 }
 
-.aurora-orb {
+.hero-bg-img {
   position: absolute;
-  border-radius: 50%;
-  will-change: transform;
+  top: 0;
+  right: 0;
+  width: 72%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
 }
 
-.aurora-1 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, transparent 70%);
-  top: -150px;
-  right: -50px;
-  animation: aurora-drift-1 14s ease-in-out infinite;
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    rgba(0, 0, 0, 0.94) 28%,
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
 }
 
-.aurora-2 {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
-  top: 40%;
-  left: -100px;
-  animation: aurora-drift-2 18s ease-in-out infinite;
-}
-
-.aurora-3 {
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
-  bottom: -50px;
-  right: 35%;
-  animation: aurora-drift-3 11s ease-in-out infinite;
-}
-
-@keyframes aurora-drift-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%       { transform: translate(-40px, 30px) scale(1.05); }
-  66%       { transform: translate(20px, -20px) scale(0.95); }
-}
-@keyframes aurora-drift-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50%       { transform: translate(60px, -40px) scale(1.1); }
-}
-@keyframes aurora-drift-3 {
-  0%, 100% { transform: translate(0, 0); }
-  40%       { transform: translate(-30px, 20px); }
-  80%       { transform: translate(20px, -10px); }
-}
-
-/* Hero layout */
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-16);
-  align-items: center;
+/* Hero text — full-width, anchored left */
+.hero-text {
+  max-width: 580px;
   position: relative;
   z-index: 1;
 }
 
-/* Hero text */
-.hero-text {
-  max-width: 600px;
-}
-
 .hero-h1 {
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
-  line-height: 1.1;
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  line-height: 1.08;
   margin-bottom: var(--space-6);
-  color: var(--text);
+  color: #ffffff;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.8);
 }
 
 /* Pearl animated gradient text */
@@ -606,7 +577,7 @@ section {
 
 .hero-sub {
   font-size: var(--text-lg);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.65;
   margin-bottom: var(--space-8);
   max-width: 520px;
@@ -621,7 +592,7 @@ section {
   align-items: center;
   gap: var(--space-3);
   font-size: var(--text-sm);
-  color: var(--text-faint);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .hero-stars {
@@ -1605,10 +1576,6 @@ section {
   }
 
   .pearl-text,
-  .aurora-orb,
-  .dashboard,
-  .toast,
-  .activity-item,
   .badge-dot {
     animation: none !important;
   }
@@ -1616,9 +1583,6 @@ section {
   .pearl-text {
     background: var(--grad-pearl);
   }
-
-  .toast { opacity: 1; }
-  .activity-item { opacity: 1; }
 }
 
 /* ============================================================
@@ -1639,15 +1603,9 @@ section {
   .nav-links  { display: flex; }
   .hamburger  { display: none; }
 
-  /* Hero */
-  .hero-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
-  }
-
-  .hero-visual {
-    display: block;
-    padding: var(--space-8) 0 var(--space-8) var(--space-8);
+  /* Hero — image background needs no grid change */
+  .hero-text {
+    max-width: 600px;
   }
 
   .dashboard {
