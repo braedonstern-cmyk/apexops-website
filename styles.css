@@ -523,10 +523,10 @@ section {
   position: absolute;
   top: 0;
   right: 0;
-  width: 72%;
+  width: 55%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  object-position: center center;
   display: block;
 }
 
@@ -536,9 +536,9 @@ section {
   background: linear-gradient(
     to right,
     #000000 0%,
-    rgba(0, 0, 0, 0.94) 28%,
-    rgba(0, 0, 0, 0.75) 50%,
-    rgba(0, 0, 0, 0.25) 75%,
+    #000000 38%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(0, 0, 0, 0.3) 75%,
     rgba(0, 0, 0, 0.05) 100%
   );
 }
@@ -818,8 +818,6 @@ section {
    ============================================================ */
 .trust-bar {
   background: var(--bg-elevated);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
   padding: var(--space-8) 0;
 }
 
