@@ -407,6 +407,66 @@ function initSmoothScroll() {
 }
 
 /* ============================================================
+   TEXT SCRAMBLE — hero headline reveal on load
+   ============================================================ */
+function initTextScramble() {
+  const el = $('.scramble-text');
+  if (!el) return;
+
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  const original = el.textContent.trim();
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let frame = 0;
+  let iteration = 0;
+
+  function update() {
+    el.textContent = original.split('').map((char, i) => {
+      if (char === ' ' || char === "'" || char === '.') return char;
+      if (i < iteration) return original[i];
+      return chars[Math.floor(Math.random() * chars.length)];
+    }).join('');
+
+    if (frame % 2 === 0 && iteration < original.length) iteration++;
+    frame++;
+
+    if (iteration < original.length) {
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = original;
+    }
+  }
+
+  // Start after hero entrance animation begins
+  setTimeout(update, 350);
+}
+
+/* ============================================================
+   3D CARD TILT — desktop only, respects reduced motion
+   ============================================================ */
+function initCardTilt() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile = window.matchMedia('(max-width: 1023px)').matches;
+  if (prefersReduced || isMobile) return;
+
+  const cards = $$('.pain-card, .service-category, .testimonial-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(900px) rotateX(${y * -6}deg) rotateY(${x * 6}deg) translateY(-5px)`;
+    }, { passive: true });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+/* ============================================================
    INIT — run everything
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -418,6 +478,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initForm();
   initSmoothScroll();
+  initTextScramble();
+  initCardTilt();
 
   // Hero entrance animation — stagger children
   const heroText = $('.hero-text');

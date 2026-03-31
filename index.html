@@ -142,7 +142,7 @@
             </div>
 
             <h1 id="hero-heading" class="hero-h1">
-              You're Great at What You Do.
+              <span class="scramble-text">You're Great at What You Do.</span>
               <span class="pearl-text">Let AI Handle the Rest.</span>
             </h1>
 
@@ -160,7 +160,7 @@
 
             <p class="hero-trust">
               <span class="hero-stars" aria-label="Five stars">★★★★★</span>
-              <span>100% Free &middot; No Tech Required &middot; Response Within 24 Hours</span>
+              <span>Trusted by San Diego business owners &middot; 100% Free &middot; 24hr response</span>
             </p>
           </div>
 
@@ -197,6 +197,28 @@
                     <span class="metric-trend">↑ new</span>
                   </div>
                 </div>
+              </div>
+
+              <div class="dashboard-chart" aria-hidden="true">
+                <div class="chart-header">
+                  <span class="chart-title">Weekly Leads</span>
+                  <span class="chart-value">+34%</span>
+                </div>
+                <svg class="sparkline" viewBox="0 0 200 48" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="spark-fill-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.25"/>
+                      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="spark-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#3B82F6"/>
+                      <stop offset="100%" stop-color="#A78BFA"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon fill="url(#spark-fill-grad)" points="0,44 25,36 50,26 75,31 100,16 125,9 150,13 175,4 200,2 200,48 0,48"/>
+                  <polyline stroke="url(#spark-line-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="0,44 25,36 50,26 75,31 100,16 125,9 150,13 175,4 200,2"/>
+                  <circle cx="200" cy="2" r="3.5" fill="#A78BFA"/>
+                </svg>
               </div>
 
               <div class="activity-feed">
@@ -459,6 +481,74 @@
 
         <div class="how-cta reveal">
           <a href="#audit" class="btn btn-primary btn-lg">Start With a Free Audit →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS ------------------------------------------- -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-label">Client Results</div>
+        <h2 id="testimonials-heading">The Part That Actually<br>Matters to You</h2>
+        <p class="section-sub">Real businesses. Specific outcomes. Enough to mean something.</p>
+
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card reveal">
+            <span class="testimonial-stars" aria-label="Five stars">★★★★★</span>
+            <blockquote class="testimonial-quote">
+              "The AI answering system captured 3 jobs in the first week I would've just missed. I didn't believe it would work until I saw the call logs. Now I don't stress about after-hours anymore."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="testimonial-name">Maria S.</div>
+                <div class="testimonial-role">Owner &middot; Plumbing &amp; HVAC · San Diego</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card testimonial-card-featured reveal">
+            <span class="testimonial-stars" aria-label="Five stars">★★★★★</span>
+            <blockquote class="testimonial-quote">
+              "I used to spend Sunday nights doing follow-ups and invoices. Braedon automated all of it in about a week. I literally don't touch that stuff anymore. Got my weekends back."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar testimonial-avatar-alt" aria-hidden="true">D</div>
+              <div>
+                <div class="testimonial-name">Derek N.</div>
+                <div class="testimonial-role">Owner &middot; Pressure Washing · San Diego</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <span class="testimonial-stars" aria-label="Five stars">★★★★★</span>
+            <blockquote class="testimonial-quote">
+              "We went from 4.2 to 4.8 stars on Google in six weeks. The automated review requests brought in reviews we never would have asked for manually. We show up where we didn't before."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar testimonial-avatar-alt2" aria-hidden="true">A</div>
+              <div>
+                <div class="testimonial-name">Amber C.</div>
+                <div class="testimonial-role">Owner &middot; Wellness Studio · San Diego</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER --------------------------------------------- -->
+    <section class="cta-banner" aria-labelledby="cta-banner-heading">
+      <div class="container">
+        <div class="cta-banner-inner reveal">
+          <p class="cta-banner-eyebrow">Limited spots available each month</p>
+          <h2 id="cta-banner-heading">Your Competitors<br>Aren't Waiting.</h2>
+          <p class="cta-banner-body">Every week you delay is another week of missed calls, lost leads, and evenings you don't get back. The audit is free. The roadmap is yours to keep either way.</p>
+          <a href="#audit" class="btn btn-primary btn-lg">Get Your Free Audit →</a>
+          <p class="cta-banner-sub">No contracts &middot; No tech skills needed &middot; Response within 24 hours</p>
         </div>
       </div>
     </section>
@@ -736,7 +826,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 ApexOps. All rights reserved.</p>
+        <p>&copy; 2026 ApexOps. All rights reserved.</p>
         <a href="/privacy-policy">Privacy Policy</a>
       </div>
     </div>

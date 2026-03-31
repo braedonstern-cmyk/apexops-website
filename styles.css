@@ -1721,3 +1721,306 @@ section {
 @media (min-width: 1280px) {
   .hero { padding-top: calc(80px + var(--space-20)); }
 }
+
+/* ============================================================
+   SCRAMBLE TEXT — hero H1 first line wrapper
+   ============================================================ */
+.scramble-text {
+  display: block;
+}
+
+/* ============================================================
+   DASHBOARD SPARKLINE CHART
+   ============================================================ */
+.dashboard-chart {
+  padding: var(--space-3) var(--space-5) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.chart-title {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+.chart-value {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--green);
+  background: rgba(34, 197, 94, 0.12);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.sparkline {
+  width: 100%;
+  height: 48px;
+  display: block;
+  overflow: visible;
+}
+
+/* ============================================================
+   ENHANCED CARD HOVER — add transform transition
+   ============================================================ */
+.pain-card,
+.service-category {
+  transition: border-color 0.25s var(--ease-out),
+              background 0.25s var(--ease-out),
+              box-shadow 0.25s var(--ease-out),
+              transform 0.3s var(--ease-out);
+  will-change: transform;
+}
+
+.pain-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(167, 139, 250, 0.1);
+}
+
+.service-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonials {
+  padding: var(--space-24) 0;
+  background: var(--bg-elevated);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-12);
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease-out),
+              transform 0.3s var(--ease-out),
+              box-shadow 0.3s var(--ease-out);
+  will-change: transform;
+}
+
+/* Oversized quotation mark as background texture */
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 0.25rem;
+  right: 1rem;
+  font-family: Georgia, serif;
+  font-size: 9rem;
+  line-height: 1;
+  color: var(--blue);
+  opacity: 0.05;
+  pointer-events: none;
+  user-select: none;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(167, 139, 250, 0.35);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(167, 139, 250, 0.1);
+}
+
+.testimonial-card-featured {
+  border-color: rgba(59, 130, 246, 0.22);
+  background: rgba(59, 130, 246, 0.03);
+}
+
+.testimonial-card-featured::before {
+  color: var(--purple);
+}
+
+.testimonial-card-featured:hover {
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.15);
+}
+
+.testimonial-stars {
+  display: block;
+  background: linear-gradient(135deg, #F59E0B, #FCD34D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: var(--text-sm);
+  letter-spacing: 2px;
+  margin-bottom: var(--space-4);
+}
+
+.testimonial-quote {
+  font-size: var(--text-base);
+  color: var(--text);
+  line-height: 1.72;
+  font-style: normal;
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--grad-pearl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar-alt {
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+}
+
+.testimonial-avatar-alt2 {
+  background: linear-gradient(135deg, #7C3AED, #A78BFA);
+}
+
+.testimonial-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.testimonial-role {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+/* Stagger */
+.testimonials-grid .testimonial-card:nth-child(2) { transition-delay: 100ms; }
+.testimonials-grid .testimonial-card:nth-child(3) { transition-delay: 200ms; }
+
+/* ============================================================
+   CTA BANNER
+   ============================================================ */
+.cta-banner {
+  padding: var(--space-24) 0;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Radial glow */
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.14) 0%, rgba(59, 130, 246, 0.06) 45%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Dot grid texture */
+.cta-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.cta-banner-inner {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner-eyebrow {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--grad-pearl);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-5);
+}
+
+.cta-banner h2 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  margin-bottom: var(--space-5);
+  line-height: 1.1;
+}
+
+.cta-banner-body {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  margin-bottom: var(--space-8);
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
+.cta-banner .btn {
+  display: inline-flex;
+  margin-bottom: var(--space-5);
+}
+
+.cta-banner-sub {
+  font-size: var(--text-sm);
+  color: var(--text-faint);
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (≥ 640px) ADDITIONS
+   ============================================================ */
+@media (min-width: 640px) {
+  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   RESPONSIVE — DESKTOP (≥ 1024px) ADDITIONS
+   ============================================================ */
+@media (min-width: 1024px) {
+  .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================================
+   REDUCED MOTION — additions
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .pain-card,
+  .service-category,
+  .testimonial-card {
+    transition: border-color 0.2s, background 0.2s !important;
+    will-change: auto !important;
+  }
+}
