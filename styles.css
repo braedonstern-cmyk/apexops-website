@@ -366,6 +366,7 @@ section {
   right: 0;
   z-index: 100;
   padding: var(--space-4) 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%);
   transition: background 0.3s var(--ease-std), backdrop-filter 0.3s, padding 0.3s;
 }
 
@@ -521,26 +522,29 @@ section {
 
 .hero-bg-img {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 55%;
-  height: 100%;
+  top: -4%;
+  right: -4%;
+  width: 108%;
+  height: 108%;
   object-fit: cover;
-  object-position: center center;
+  object-position: 72% center;
   display: block;
 }
 
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    #000000 0%,
-    #000000 38%,
-    rgba(0, 0, 0, 0.85) 50%,
-    rgba(0, 0, 0, 0.3) 75%,
-    rgba(0, 0, 0, 0.05) 100%
-  );
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0) 18%),
+    linear-gradient(
+      to right,
+      #000000 0%,
+      #000000 30%,
+      rgba(0, 0, 0, 0.88) 42%,
+      rgba(0, 0, 0, 0.5) 58%,
+      rgba(0, 0, 0, 0.1) 80%,
+      rgba(0, 0, 0, 0.0) 100%
+    );
 }
 
 /* Hero text — full-width, anchored left */
