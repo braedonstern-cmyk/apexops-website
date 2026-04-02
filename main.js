@@ -450,7 +450,7 @@ function initCardTilt() {
   const isMobile = window.matchMedia('(max-width: 1023px)').matches;
   if (prefersReduced || isMobile) return;
 
-  const cards = $$('.pain-card, .service-category, .testimonial-card');
+  const cards = $$('.pain-card, .system-module, .offer-card');
 
   cards.forEach(card => {
     card.addEventListener('mousemove', e => {
