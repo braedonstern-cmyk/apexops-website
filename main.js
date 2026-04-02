@@ -331,7 +331,7 @@ function initForm() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    if (!validateStep(step2)) return;
+    if (!validateStep(step1)) return;
 
     // Swap button to loading state
     const labelEl   = btnSubmit.querySelector('.btn-label');

@@ -988,7 +988,8 @@ section {
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-bright);
   border-radius: var(--radius-md);
@@ -999,17 +1000,22 @@ section {
   -webkit-appearance: none;
 }
 
-.form-group input::placeholder { color: var(--text-faint); }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--text-faint); }
+
+.form-group textarea { resize: vertical; }
 
 .form-group input:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: rgba(167, 139, 250, 0.5);
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
 }
 
 .form-group input.error,
-.form-group select.error {
+.form-group select.error,
+.form-group textarea.error {
   border-color: rgba(239, 68, 68, 0.5);
 }
 
