@@ -564,8 +564,8 @@ section {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  font-size: var(--text-sm);
-  color: rgba(255, 255, 255, 0.55);
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .hero-stars {
@@ -676,7 +676,7 @@ section {
   color: var(--text);
 }
 
-.pain-card p { font-size: var(--text-sm); }
+.pain-card p { font-size: var(--text-base); }
 
 /* Stagger */
 .pain-grid .pain-card:nth-child(2) { transition-delay: 80ms; }
@@ -1548,14 +1548,14 @@ section {
 }
 
 .system-module h3 {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   font-weight: 600;
   margin-bottom: var(--space-3);
   color: var(--text);
 }
 
 .system-module p {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--text-muted);
   line-height: 1.65;
   margin-bottom: var(--space-4);
@@ -1680,7 +1680,7 @@ section {
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--text-muted);
   line-height: 1.5;
 }
