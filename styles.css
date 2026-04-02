@@ -1741,3 +1741,388 @@ section {
   object-position: center top;
   display: block;
 }
+
+/* ============================================================
+   HERO — SECONDARY CTA BUTTON
+   ============================================================ */
+.hero-cta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-cta-secondary {
+  font-size: var(--text-base);
+  padding: 0.85rem 2rem;
+}
+
+/* ============================================================
+   HERO FUNNEL ROW
+   ============================================================ */
+.hero-funnel-section {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-8) 0;
+}
+
+.hero-funnel-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hero-funnel-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+  padding: var(--space-3) var(--space-4);
+}
+
+.hero-funnel-num {
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  background: var(--grad-pearl);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.06em;
+}
+
+.hero-funnel-label {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hero-funnel-sub {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+}
+
+.hero-funnel-arrow {
+  color: var(--text-faint);
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+  opacity: 0.4;
+}
+
+@media (max-width: 639px) {
+  .hero-funnel-arrow {
+    display: none;
+  }
+  .hero-funnel-row {
+    gap: var(--space-1);
+  }
+  .hero-funnel-step {
+    padding: var(--space-2);
+    min-width: 80px;
+  }
+}
+
+/* ============================================================
+   TRUST BAR — 5-column variant
+   ============================================================ */
+.trust-grid-5 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .trust-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .trust-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+  }
+}
+
+.trust-emoji {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* ============================================================
+   AGENTS SECTION
+   ============================================================ */
+.agents-section {
+  padding: var(--space-24) 0;
+  background: var(--bg);
+}
+
+.agents-grid {
+  /* inherits .system-grid layout */
+}
+
+@media (min-width: 1024px) {
+  .agents-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.agents-footer-note {
+  /* inherits .system-note */
+}
+
+/* ============================================================
+   OFFER — project note below cards
+   ============================================================ */
+.offer-project-note {
+  margin-top: var(--space-8);
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-5) var(--space-6);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.offer-project-note p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.offer-project-note strong {
+  color: var(--text);
+}
+
+/* ============================================================
+   PROCESS — 5-step layout
+   ============================================================ */
+@media (min-width: 1024px) {
+  .steps {
+    /* override existing 3-step style for 5 steps — keep column layout */
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    flex: unset;
+    grid-template-columns: auto 1fr;
+    padding: var(--space-8) 0;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  .step:first-child {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .step-number {
+    font-size: 4.5rem;
+    min-width: 5rem;
+  }
+
+  .step-content h3 {
+    padding-top: var(--space-4);
+  }
+
+  .step-connector {
+    display: none;
+  }
+}
+
+/* ============================================================
+   WHY IT'S DIFFERENT — comparison table
+   ============================================================ */
+.why-section {
+  padding: var(--space-24) 0;
+  background: var(--bg-elevated);
+}
+
+.comparison-table-wrap {
+  margin-top: var(--space-12);
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  min-width: 560px;
+}
+
+.comparison-table thead tr {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th {
+  padding: var(--space-4) var(--space-5);
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.comparison-table th:first-child {
+  width: 28%;
+  color: var(--text-faint);
+}
+
+.comparison-table th.col-agency {
+  color: var(--text-faint);
+  width: 32%;
+}
+
+.comparison-table th.col-apex {
+  background: rgba(124, 58, 237, 0.10);
+  color: var(--purple-light);
+  border-left: 1px solid rgba(124, 58, 237, 0.25);
+  width: 40%;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.comparison-table td {
+  padding: var(--space-4) var(--space-5);
+  vertical-align: top;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.comparison-table td.row-label {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.comparison-table td.col-apex {
+  background: rgba(124, 58, 237, 0.06);
+  color: var(--text);
+  border-left: 1px solid rgba(124, 58, 237, 0.18);
+  font-weight: 500;
+}
+
+/* ============================================================
+   ABOUT — value props
+   ============================================================ */
+.about-value-props {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin: var(--space-6) 0 var(--space-8);
+}
+
+.about-value-prop {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.about-value-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.about-value-prop strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-1);
+}
+
+.about-value-prop p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   FORM — optional label, sub-text
+   ============================================================ */
+.field-optional {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+.form-sub-text {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  text-align: center;
+  margin-top: var(--space-2);
+}
+
+/* ============================================================
+   FOOTER — inline contact row
+   ============================================================ */
+.footer-contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.footer-contact-inline a,
+.footer-contact-inline span {
+  font-size: var(--text-xs);
+  color: var(--text-faint);
+  transition: color 0.2s;
+}
+
+.footer-contact-inline a:hover {
+  color: var(--blue-light);
+}
+
+/* ============================================================
+   SECTION SPACING — add new sections
+   ============================================================ */
+.agents-section,
+.why-section {
+  padding: var(--space-24) 0;
+}
+
+/* FAQ answer max-height extension for longer answers */
+.faq-item.open .faq-answer {
+  max-height: 500px;
+}
+
+/* ============================================================
+   HERO CTA — centered flex for video hero
+   ============================================================ */
+.hero-text-centered .hero-cta {
+  justify-content: center;
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}

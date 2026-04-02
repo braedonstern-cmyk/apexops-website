@@ -260,6 +260,8 @@ function initForm() {
   if (!form) return;
 
   // ---- Validation helpers ----
+  // Required fields: name (id="name"), business (id="business"), email (id="email")
+  // Optional fields: phone (id="phone"), challenge (id="challenge"), website (id="website")
   function validateField(input) {
     const errorEl = input.parentElement.querySelector('.field-error');
     let msg = '';
@@ -281,9 +283,11 @@ function initForm() {
     return inputs.map(validateField).every(Boolean);
   }
 
-  // Live validation on blur
+  // Live validation on blur (only validate required fields on blur)
   $$('input, select', form).forEach(input => {
-    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('blur', () => {
+      if (input.required) validateField(input);
+    });
     input.addEventListener('input', () => {
       if (input.classList.contains('error')) validateField(input);
     });
@@ -450,7 +454,7 @@ function initCardTilt() {
   const isMobile = window.matchMedia('(max-width: 1023px)').matches;
   if (prefersReduced || isMobile) return;
 
-  const cards = $$('.pain-card, .system-module, .offer-card');
+  const cards = $$('.pain-card, .system-module, .offer-card, .agents-section .system-module');
 
   cards.forEach(card => {
     card.addEventListener('mousemove', e => {
