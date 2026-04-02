@@ -441,6 +441,9 @@
         <div class="about-inner">
 
           <div class="about-quote-col reveal">
+            <div class="about-portrait-wrap">
+              <img src="braedon.png" alt="Braedon Stern" class="about-portrait">
+            </div>
             <blockquote class="about-quote">
               <span class="quote-mark" aria-hidden="true">&ldquo;</span>
               I don't sell marketing. I don't sell AI. I install systems that grow revenue — and I manage them so you don't have to think about it.
@@ -597,39 +600,37 @@
                   <span class="field-error" aria-live="polite"></span>
                 </div>
 
+                <div class="form-group">
+                  <label for="goal">What's your main goal right now?</label>
+                  <select id="goal" name="main_goal" required>
+                    <option value="" disabled selected>Pick the one that matters most</option>
+                    <option value="more-leads">Get more leads coming in</option>
+                    <option value="convert-more">Convert more leads into customers</option>
+                    <option value="automate">Automate my follow-up and admin</option>
+                    <option value="reviews">Build more reviews and trust online</option>
+                    <option value="clarity">Understand what's actually working</option>
+                  </select>
+                  <span class="field-error" aria-live="polite"></span>
+                </div>
+
                 <button type="button" class="btn btn-primary btn-lg btn-full" id="btn-next">
                   Continue →
                 </button>
               </div>
 
               <!-- Step 2 -->
-              <div class="form-step" id="form-step-2" aria-label="Step 2 of 2: About your business" hidden>
-                <p class="form-step-label">Your business</p>
+              <div class="form-step" id="form-step-2" aria-label="Step 2 of 2: Your situation" hidden>
+                <p class="form-step-label">Your situation</p>
 
                 <div class="form-group">
-                  <label for="business-type">Business type</label>
-                  <select id="business-type" name="business_type" required>
-                    <option value="" disabled selected>Select your industry</option>
-                    <option value="restaurant">Restaurant / Food &amp; Beverage</option>
-                    <option value="contractor">Contractor / Home Services</option>
-                    <option value="professional">Professional Services</option>
-                    <option value="health">Health &amp; Wellness</option>
-                    <option value="retail">Retail</option>
-                    <option value="auto">Auto Services</option>
-                    <option value="other">Other</option>
-                  </select>
-                  <span class="field-error" aria-live="polite"></span>
-                </div>
-
-                <div class="form-group">
-                  <label for="challenge">Biggest revenue gap right now</label>
+                  <label for="challenge">What's holding you back the most?</label>
                   <select id="challenge" name="biggest_challenge" required>
-                    <option value="" disabled selected>Where are you losing revenue?</option>
-                    <option value="capture">Not capturing enough leads</option>
-                    <option value="followup">No consistent follow-up</option>
-                    <option value="conversion">Low conversion rate</option>
-                    <option value="reviews">Not enough reviews / trust</option>
-                    <option value="data">No visibility into what's working</option>
+                    <option value="" disabled selected>Be honest — this shapes our call</option>
+                    <option value="no-system">No real system in place — just winging it</option>
+                    <option value="leads-drop">Leads come in but most go cold</option>
+                    <option value="no-followup">I know I need follow-up but it's not happening</option>
+                    <option value="no-data">I don't know what's working or why</option>
+                    <option value="too-manual">Everything is too manual and taking too long</option>
                   </select>
                   <span class="field-error" aria-live="polite"></span>
                 </div>
