@@ -75,9 +75,17 @@
       </a>
 
       <ul class="nav-links" role="list">
-        <li><a href="#marketing">Marketing</a></li>
-        <li><a href="#sales">Sales</a></li>
-        <li><a href="#operations">Operations</a></li>
+        <li class="nav-dropdown" id="services-dropdown">
+          <button class="nav-dropdown-trigger" aria-expanded="false" aria-controls="services-menu">
+            Services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" id="services-menu" role="menu">
+            <a href="#marketing" role="menuitem">Marketing</a>
+            <a href="#sales" role="menuitem">Sales</a>
+            <a href="#operations" role="menuitem">Operations</a>
+          </div>
+        </li>
         <li><a href="#about">About</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -105,6 +113,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
+
       <a href="#booking" class="btn btn-primary">Get My Free Assessment &rarr;</a>
       <div class="mobile-nav-contact">
         <a href="tel:8587744049">(858) 774-4049</a>

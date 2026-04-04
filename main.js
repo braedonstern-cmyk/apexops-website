@@ -473,9 +473,49 @@ function initCardTilt() {
 /* ============================================================
    INIT — run everything
    ============================================================ */
+/* ============================================================
+   SERVICES DROPDOWN
+   ============================================================ */
+function initServicesDropdown() {
+  const dropdown = $('#services-dropdown');
+  if (!dropdown) return;
+
+  const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+  const menu    = dropdown.querySelector('.nav-dropdown-menu');
+  const links   = dropdown.querySelectorAll('.nav-dropdown-menu a');
+
+  function open() {
+    dropdown.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+  function close() {
+    dropdown.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+  }
+  function toggle() {
+    dropdown.classList.contains('open') ? close() : open();
+  }
+
+  trigger.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) close();
+  });
+
+  // Close when a link is clicked
+  links.forEach(link => link.addEventListener('click', close));
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initMobileMenu();
+  initServicesDropdown();
   initAuroraParallax();
   initScrollReveal();
   initCounters();
