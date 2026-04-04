@@ -762,6 +762,107 @@ section {
 .pain-grid .pain-card:nth-child(4) { transition-delay: 240ms; }
 .pain-grid .pain-card:nth-child(5) { transition-delay: 320ms; }
 
+/* ============================================================
+   DEPARTMENT TRIANGLE
+   ============================================================ */
+.dept-triangle-wrap {
+  margin-top: var(--space-12);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10) var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr 220px 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "tl center tr"
+    ". bc     .";
+  gap: var(--space-8) var(--space-4);
+  align-items: center;
+}
+
+.dept-tri-node {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dept-tri-node--tl {
+  grid-area: tl;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.dept-tri-node--tr {
+  grid-area: tr;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.dept-tri-node--bc {
+  grid-area: bc;
+  text-align: center;
+  align-items: center;
+  padding-bottom: var(--space-2);
+}
+
+.dept-tri-center {
+  grid-area: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dept-tri-svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.dept-tri-icon {
+  color: var(--purple-light);
+  opacity: 0.85;
+  margin-bottom: var(--space-1);
+}
+
+.dept-tri-name {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.dept-tri-desc {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  max-width: 180px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .dept-triangle-wrap {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "tl"
+      "tr"
+      "bc"
+      "center";
+    gap: var(--space-6);
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .dept-tri-node--tl,
+  .dept-tri-node--tr,
+  .dept-tri-node--bc {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .dept-tri-desc { max-width: none; }
+  .dept-tri-center { display: none; }
+}
+
 
 /* ============================================================
    HOW IT WORKS

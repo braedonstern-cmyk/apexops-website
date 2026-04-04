@@ -164,54 +164,63 @@
         <h2 id="pain-heading">Things are slipping through the cracks &mdash; because there&rsquo;s not enough time to do it all.</h2>
         <p class="section-sub">You built something good. But time, money, and expertise are slipping through the gaps in your systems. Here&rsquo;s what we hear from almost every business owner before we work together.</p>
 
-        <div class="pain-grid">
-          <div class="pain-card reveal">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <div class="dept-triangle-wrap reveal">
+
+          <!-- Sales — top left -->
+          <div class="dept-tri-node dept-tri-node--tl">
+            <div class="dept-tri-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
-            <h3>Leads came in. Nobody followed up fast enough.</h3>
-            <p>A potential customer reached out, didn&rsquo;t hear back quickly, and called your competitor. This is happening more than you know &mdash; and it&rsquo;s the most fixable problem on this list.</p>
+            <strong class="dept-tri-name">Sales</strong>
+            <p class="dept-tri-desc">Close more deals without lifting a finger.</p>
           </div>
 
-          <div class="pain-card reveal">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3>Your last agency sent you a report. Not new customers.</h3>
-            <p>You paid for content, ads, or SEO. You got a monthly summary. When you stopped paying, it all stopped. You were buying activity, not results. There&rsquo;s a difference.</p>
+          <!-- Triangle graphic — center -->
+          <div class="dept-tri-center" aria-hidden="true">
+            <svg class="dept-tri-svg" viewBox="0 0 240 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="tg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#818cf8"/>
+                  <stop offset="50%" stop-color="#a78bfa"/>
+                  <stop offset="100%" stop-color="#c084fc"/>
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <!-- outer triangle -->
+              <polygon points="120,14 224,196 16,196" stroke="url(#tg1)" stroke-width="1.5" fill="rgba(129,140,248,0.04)" filter="url(#glow)"/>
+              <!-- inner triangle -->
+              <polygon points="120,76 178,172 62,172" stroke="url(#tg1)" stroke-width="1" fill="rgba(167,139,250,0.06)"/>
+              <!-- spine lines -->
+              <line x1="120" y1="14" x2="120" y2="172" stroke="url(#tg1)" stroke-width="0.75" opacity="0.35"/>
+              <line x1="16" y1="196" x2="178" y2="172" stroke="url(#tg1)" stroke-width="0.75" opacity="0.35"/>
+              <line x1="224" y1="196" x2="62" y2="172" stroke="url(#tg1)" stroke-width="0.75" opacity="0.35"/>
+              <!-- center node -->
+              <circle cx="120" cy="148" r="14" fill="rgba(167,139,250,0.12)"/>
+              <circle cx="120" cy="148" r="5" fill="#a78bfa" opacity="0.9"/>
+            </svg>
           </div>
 
-          <div class="pain-card reveal">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+          <!-- Marketing — top right -->
+          <div class="dept-tri-node dept-tri-node--tr">
+            <div class="dept-tri-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
-            <h3>&ldquo;I&rsquo;ll follow up with them tomorrow.&rdquo; You didn&rsquo;t. They moved on.</h3>
-            <p>You meant to. Life got in the way. Most sales aren&rsquo;t lost at the pitch &mdash; they&rsquo;re lost in the silence after it. Without a system that follows up automatically, warm leads go cold every week.</p>
+            <strong class="dept-tri-name">Marketing</strong>
+            <p class="dept-tri-desc">Generate demand and visibility 24/7.</p>
           </div>
 
-          <div class="pain-card reveal">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <!-- Operations — bottom center -->
+          <div class="dept-tri-node dept-tri-node--bc">
+            <div class="dept-tri-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
             </div>
-            <h3>Your best customers loved you. They just never came back.</h3>
-            <p>Not because they had a bad experience. Because nobody reminded them. Your existing customer list is your most valuable asset &mdash; and right now it&rsquo;s sitting untouched.</p>
+            <strong class="dept-tri-name">Operations</strong>
+            <p class="dept-tri-desc">Automate the work that runs your business.</p>
           </div>
 
-          <div class="pain-card reveal">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M2 20h.01M7 20v-4"/><path d="M12 20V10"/><path d="M17 20V4"/><path d="M22 20v-8"/></svg>
-            </div>
-            <h3>You&rsquo;re spending money on marketing. You don&rsquo;t know if it&rsquo;s working.</h3>
-            <p>No dashboard. No clear picture of where customers come from or where they drop off. You&rsquo;re making expensive decisions based on gut feel &mdash; and you know it.</p>
-          </div>
-
-          <div class="pain-card reveal">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h3>You&rsquo;re doing the work of three people. Something is always slipping.</h3>
-            <p>The reviews aren&rsquo;t being asked for. The follow-ups aren&rsquo;t going out. The social posts aren&rsquo;t happening. You know what needs to be done &mdash; you just don&rsquo;t have time to do it all.</p>
-          </div>
         </div>
       </div>
     </section>
